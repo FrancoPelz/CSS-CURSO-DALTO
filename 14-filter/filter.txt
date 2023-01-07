@@ -1,0 +1,16 @@
+FILTER------------------------------
+
+Propiedad Filter: 
+
+none
+blur(px) -> desenfocar
+brightness(0-1) -> puede ser mayor a 1
+contrast(number or %) -> entre el contenido y el fondo - igual que la anterior (1.3/1.5 muy bueno)
+drp-shadow(medidas) -> nos deja darle sombras a las imagenes sin fondo
+grayscale(%)
+hue-rotate(deg) -> rotar las gamas de colores
+invert(%) -> invertir colores
+opacity(%) -> transparencia
+saturate(%) -> lleva cada color al su punto mas fuerte
+sepia(%) 
+url("filters.svg#filter-id") -> investigar

@@ -1,0 +1,15 @@
+Otras PROPIEDADES, FUNCIONES y SELECTORES CURIOSOS de CSS+
+
+Direction: lrt | rtl | initial | inherit;
+es como un text align, se puede correr contra que margen esta el texto
+
+letter Spacing: separacion entre letras
+ 
+scroll-behavior: smooth 
+
+user-selected: none (el usuario no puede seleccionar texto por ejemplo)
+
+text-shadow:
+
+https://www.w3schools.com/cssref/css_selectors.php
+

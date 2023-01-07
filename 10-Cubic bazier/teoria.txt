@@ -1,0 +1,14 @@
+CUBIC BAZIER---------------------------------------------------
+
+Es un valor que le podemos dar a la propiedad transition-timing-function
+podemos cambiar las velocidades durante el proceso de transicion
+con las curvas de BAZIER
+
+existen generadores de curvas de bazier, no es recomendable hacerlo manualmente
+https://cubic-bezier.com/#.17,.67,.83,.67
+o podemos usar la herramienta que nos da google (F12) y copiar las coordenadas que genremos
+
+animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1) 
+
+
+

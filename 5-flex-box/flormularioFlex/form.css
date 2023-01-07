@@ -1,0 +1,97 @@
+*{
+    font-weight: 100;
+}
+
+body{
+    background-color: #000;
+}
+
+.flex-container{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 50px 50px;
+    background: #222;
+    padding: 20px;
+    border: 14px solid #000;
+    outline: 3px solid #094;
+    min-width: 400px;
+}
+
+.form{
+    min-width: 400px;
+    flex: 1;
+    text-align: center;
+    padding: 30px;
+    order: 5;
+    margin: auto;
+}
+
+.form__input{
+    width: 100%;
+    padding: 7px;
+    margin: 6px 0;
+    border: none;
+    border-bottom: 3px solid #094;
+    background: transparent;
+    color: #fff;
+    order: 2 ;
+}
+
+.form__input:focus{
+    background: linear-gradient(to bottom, transparent, #111);
+    outline: none;
+    border-bottom: 3px solid #5f9;  
+}
+
+
+.form textarea{
+    min-height: 140px;
+    resize: none;
+}
+
+.form-img{
+    padding: 10px;
+    flex: 1;
+    display: flex;
+    min-width: 300px;
+    max-width: 400px;
+    order: 1;
+}
+
+.form-img div{
+    padding: 10px;
+}
+
+.img-container{
+    margin: auto;
+}
+
+.img-container div{
+    border-radius: 50%;
+    text-align: center;
+    padding: 40px;
+}
+
+.form-img img{
+    width: 80%;
+    margin: auto;
+}
+
+.form input[type="submit"] {
+    background-color: #000;
+    border-bottom: none;
+    padding: 12px;
+}
+
+.form input[type="submit"]:hover {
+    background-color: #111;
+    border-bottom: none;
+    padding: 12px;
+}
+
+
+.form input[type="submit"]:active {
+    background-color: #111;
+}

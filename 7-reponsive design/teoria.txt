@@ -1,0 +1,37 @@
+RESPONSIVE DESIGN (COMPLETO)
+
+Extructuras flexibles (contenedores flexibles, imagenes y video flexibles)
+Media Queries
+
+----------------------------------------------------------
+
+@Media se usa en consultas de medios para aplicar a diferentes
+estilos para diferentes tipos / dispositivos de medios.
+
+
+@media screen      and       (min-width: 400px) 
+        tipo   condicional    condicion
+
+_ancho y alto de la ventana grafica
+_ancho y alto del dispositivos
+_orientacion (¿la tableta/telefono esta en modo horizontal o vertical?)
+_resolucion
+
+    all
+        apto para todos los dispositivos
+    print
+        destinado a material impreso y visualizacion de documentos en una 
+        pantalla en el modo vista previa de impresion
+    screen
+        destinaado principalmente a las pantallas
+    speech
+        destinado a sintetizadores de voz
+
+----------------------------------------------------------
+
+Operadores AND | OR
+
+
+----------------------------------------------------------
+
+orientacion: landscape y portrait

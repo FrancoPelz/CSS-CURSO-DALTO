@@ -1,0 +1,19 @@
+TRANSFORM---------------------------------------------------
+
+
+transform: TranslateX(x) - TranslateY(y) - Translate(x - x,y)
+(si usamos porcentajes, son porcentajes relativos al momento) 
+recomendado para animar
+
+transform: scale(xy - x,y) - scaleX(x) - scaleY(y)
+
+transform: rotate(angleUnit) - rotateX(angleUnit) - rotateZ(angleUnit) - rotate3D(angleUnit) || angleUnit = deg - grad - rad - turn 
+
+transform: skew(angleUnit) efecto corte 
+
+
+
+
+
+
+

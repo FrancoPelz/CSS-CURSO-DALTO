@@ -1,0 +1,28 @@
+*{
+    font-weight: 100;
+}
+
+
+.container{
+    background: #86f;
+    padding: 20px 5px;
+}
+
+.caja{
+    background: #025;
+    height: 80px;
+    width: 80px;
+    margin: 30px;
+    display: flex;
+    color: #fff;
+    transition: transform 1s;
+}
+
+.caja:hover{
+    transform: skew(30deg)
+
+}
+
+b {
+    margin: auto;
+}

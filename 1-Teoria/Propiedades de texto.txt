@@ -1,0 +1,13 @@
+------------------------PROPIEDADES DE TEXTO
+
+font-size : 2em;
+font-family : tipografia;
+line-height : 1.9; espacio total que ocupa  
+font-weight: 100; Es el grosor
+
+-INUTILES
+font-stretch: normal;  
+font-variant: small-caps;
+
+------------------------TIPOGRAFIAS EXTERNAS
+para exportar -> Google Fonts 

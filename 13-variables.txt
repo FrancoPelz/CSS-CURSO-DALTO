@@ -1,0 +1,17 @@
+VARIABLES
+
+--varNmae
+
+var()
+
+variables globales: para que cualquier selector la pueda usar
+tambien se pueden hacer locales, si las defino en <p> por ejemplo ,solo las 
+puedo usar en los <p>
+
+:root{
+    --color-rojo-claro: #f44
+}
+
+.container{
+    background : var(--color-rojo-claro)
+}

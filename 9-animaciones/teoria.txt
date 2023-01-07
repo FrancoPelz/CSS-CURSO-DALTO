@@ -1,0 +1,40 @@
+ANIMACIONES---------------------------------------------------
+
+
+se utiliza la regla  @KeyFrames
+
+@keyframes *nombre de la animacion*{
+    from{
+        propiedades cuando comienza 
+    }
+
+    to{
+        propiedades finales
+    }
+}
+
+otra opcion seria en lugar de FROM -> 0% y TO-> 100%
+animation-name: name
+
+animation-duration: duration
+
+animation-delay: delay
+
+animation-timing-function: (transition value)
+->Ver cuantas veces se va a repetir la animacion (infinite es un valor)
+
+animation-iteration-count: number
+
+animation-fill-mode: none | forwards | backwards | both | initial | inherit
+define cual va a ser el modo final
+ejemplo: con forwards le decimos que se quede como termina la animacion (100%)
+both sirve mas para cuando hay diferencias notorias
+
+animation-direction: normal | reverse | alternate | alternate-reverse
+alternate es para de 0% a 100% a 0%
+
+
+
+
+
+

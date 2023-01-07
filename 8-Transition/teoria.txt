@@ -1,0 +1,24 @@
+TRANSITION---------------------------------------------------
+
+Es como ir mostrando todos los frames desde un estado a otro
+Es necesario disparar un evento para que ocurra una transition
+
+hay mas props pero estas son las mas importantes(* valores obligatorios):
+
+transition-property*: property/ies - all(consume muchos recursos) - none
+
+transition-duration*: duration/s
+
+transition-delay: delay/s para mostrar el cambio despues del evento 
+--> Curva del tiempo en la que va a tardar en suceder la transicion (transicion en funcion del tiempo)
+
+transition-timing-function: linear | ease | ease-in | ease-out | ease-in-out | step-start 
+                            | step-end | steps(int,start\end) | initial | inherit;
+La velocidad con la que vana  suceder las trancisiones son las mismas, pero cambia en el como
+
+*inherit lo que hace es heredar, por ejemplo una caja puede heredar el color 
+del contenerdor en la prop background: inherit
+transition (shorthand):
+
+
+

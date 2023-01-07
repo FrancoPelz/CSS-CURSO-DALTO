@@ -1,0 +1,52 @@
+----------------------------FLEX-BOX
+
+Se le aplica flex-box a un contenedor(display: flex), y pasa a comportarse como bloque.
+Los cambios los vamos a ver en los items contenidos en esta caja.
+
+Flex-box tiene 2 ejes
+Main axis : eje x. Tienen un inicio y final, son las direcciones donde apunta. Main-start hacia main-end.
+Cross axis : eje y. Cross-start a cross-end.
+
+------Propiedades del contenedor------
+
+flex-direction: row, column, row-reverse y column-reverse cambian los inicios logicamente (un efecto espejo) 
+Cambiar la direccion del main axis: si cambio un eje, automaticamente el otro tambien se cambia
+
+Flex-Wrap: wrap y wrap-reverse, non-wrap. respeta el ancho especifico de las cajas, las tira para abajo, 
+reverse los tira para arriba 
+
+flex-flow: sirve para hacer firection y wrap juntos.Ej:  flex-flow: column wrap
+conviene usarlo cuando se cambian las 2 props juntas
+
+justify-Content: center, space around, space-between, space-evenly (main axis)
+
+aling-items: flex-start, center, flex-end, strech (default), baseline (cross-axis)
+se usa para cuando hay una linea de items que son flex items 
+
+align-content: para cuando hay mas de una linea de items. tiene los mismos valores 
+que align-items
+
+------Propiedades de los items------
+
+FUNCIONAMIENTO DEL MARGIN:
+margin-(direction): auto -> margin = contenedor - tamaño de la caja en el eje en el que corre (direction)
+
+
+ALign-self: (cross axis) flex-start -end y baseline, mueve una sola caja en particular
+en el eje y.
+
+flex-grow: (espacio asignado + sobrante / grows) (main axis)
+agarra el espacio sobrante y lo distribuye en los items restantes.
+los valores se asignan en numeros , y son las partes en las que se divide el sobrante
+
+flex-shrink: espacio que "cede" cada item (main axis)
+decide que caja va  aceder mas espacio cuando no alcance
+
+flex-basis: medicion antes de encogerse 
+(En auto(default value), agarra el with, y sino tiene mas priridad) (main axis)
+Es como el width pero tiene mas improtancia 
+
+flex: flex-grow, flex-shrink, flex-asis
+(al menos el primer parametro obligatorio)
+
+order: (como el z-index, pero en el eje en el que apunta el main axis)

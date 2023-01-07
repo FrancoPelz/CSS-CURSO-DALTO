@@ -1,0 +1,125 @@
+------------------------CSS SELECTORES
+
+***universal " * "  - selecciona todos los elementos 
+
+***de tipo - son los que seleciconamos por el nombre del elemento (h1 - button - etc)
+h1 {
+    color : red;
+}
+
+***clases "." - agregar el atributo class="algo" 
+.algo {
+    color : red;
+}
+
+***ID "#" y luego el nombre del ID   
+La forma correcta es usar los ID para elementos unicos!
+
+<h2  id="element">Mi segundo H2 con CSS</h2>
+#element{
+    color : red;
+}
+
+***por atributo - de la misma forma que con tipos, utilizamos atributos propios y los seleccionamos
+<h2  rancio="epico">Mi segundo H2 con CSS</h2>
+[rancio="epico"]{
+    color : red;
+}
+
+***descendiente - primero contenedor, luego el que quiero
+
+<h2 ><p>Mi segundo H2 con CSS</p></h2>
+de izquierda a derecha -> en este caso solo modifica a los p que estan en un h2
+h2 p {
+    color: red;
+}
+
+***pseudo-clases 
+
+b:hover {
+    color: red;
+}
+
+------------------------ESPECIFICIDAD
+(de + a -)
+
+!important +
+>
+Estilos en linea 
+>
+Identificadores (ID)
+>
+clases
+pseudo-clases
+atributos
+>
+elementos
+pseudo-elementos -
+
+asi se usa important - no es recomendable y tampoco muy necesario (solo casos extremos)
+h1{
+    color : grey !improtant
+}
+
+
+------------------------METODOLOGIA BEM
+
+Nos basamos en las clases ara saber que elemento estamos seleccionando
+
+<div class="contact-form">
+   <input type="text" class="contact-form__input">
+   <input type="password" class="contact-form__input">
+</div>
+
+Ejemplo si soolo quiero modificar el primero
+
+<div class="contact-form">
+   <input type="text" class="contact-form__input--active" >
+   <input type="text" class="contact-form__input">
+   <input type="text" class="contact-form__input">
+   <input type="text" class="contact-form__input">
+   <input type="password" class="contact-form__input">
+</div>
+
+css -> 
+.contact-form__input:first-child {
+  color: red;
+}
+
+otra forma es gregando --"loquesea" y los -- me dicen que es bastante distinto
+.contact-form__input--active {
+  color: red;
+}
+
+OTRO Ejemplo
+
+<div class="contact-form">
+  <p> class="contact-form__p">
+    <h2 class="contact-form__p-h2"></h2>
+  </p>
+</div> 
+
+
+------------------------UNIDADES
+
+relativas(variables) y fijas
+
+---fijas: px, cm, mm ,etc
+
+---relativas : rem, em. 
+REM tiene como referencia el root.
+Por defecto(se la da el navegador)  1em = 16px. Sino la clase o caja contenedora establece la equivalencia,
+sirve para cualquier propiedad que trabaje con unidad de medida.
+
+.contact-form{
+    font-size: 20px;
+}
+
+.contact-form__h2 {
+    font-size: 5em;
+} -> en este caso 1em = 20px -> 5em = 100px
+
+
+View-port - Estas medidas ocupan todo el ancho de la pantalla
+vw -> view port width. with: 100vw
+vh -> view port heigth. height: 50vh

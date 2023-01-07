@@ -1,0 +1,182 @@
+Teoria de Cajas
+
+Hay 2 tipos de Cajas: en lineas o en bloques.
+-los bloques ocupan el ancho total de la caja
+-los elementos en linea el ancho es en base al ancho del elemento
+
+Con display le podemos cambiar las propiedades a las cajas
+
+Algunas propiedades de las cajas: tamaño, background color, image, border, border-radius,
+padding, margin, box-shadow
+
+-padding: distancia entre el texto y la caja.
+padding: 20px (todos igual)
+       : 20px 30px (eje x  - eje y)
+       : 20px 10px 30px 25px (top left bottom right)
+
+-margin: distancia que hay entre cajas. Si tenemos dos cajas al lado, el margin de ambas 
+se suman
+
+-border-radius: cuanto redondeamos el borde 
+
+-border: tamaño(grosor) - estilo - color 
+
+-box-shadow: 1px 2px 15px 0 #000 ; eje x - eje y - tamaño del desenfoque - cuanto borde - color
+el text-shadow es igual pero sin la cantidad de borde
+
+si pongo repetidos con comas : box-shadow: 1px 2px 15px 0 #000, 1px 2px 15px 0 #000, 1px 2px 15px 0 #000 
+AUMENTO INTENSIDAD 
+
+
+Displays: block, inline-block, Flex, Grid, None
+
+Positions: Absolute, Relative, inherit
+
+Hover
+
+Top, Left, right, bottom
+
+
+-------------------------------------------------
+
+0) Outline : es como border pero sin afectar a las demas cajas, no ocupa un espacio real en el DOM.
+puede servir para marcar objetos por ejemplo
+
+1) Position, cuando algo adquiere una nueva posicion adquieren nuevas propeidades (top, left, right, bottom) 
+que nos dejan hacer ciertas cosas. Con las posiciones alteramos el flujo de html.
+
+STATIC: valor por defecto
+
+RELATIVE: hacemos que el espacio original en el dom se siga conservando. entonces se mueve 
+pero su espacio original sigue en el mismo lugar. Ademas el punto de referencia sigue siendo el mismo.
+top y left predominan sobre bottom y right, son mas importantes.
+
+ABSOLUTE: a diferencia de relative, el espacio no se guarda. Cuando tenemos un contenedor y le damos
+pocision absoluta a un hijo, si no le damos top y left, toma referencia del padre. AHORA si le damos top
+y left la referencia es el VIEWPORT. Cuando uso absolute la caja se ajusta al contenido. Para que tome de 
+referencia al padre, debemos posicionarlo (ej: relative al contenedor)
+
+FIXED:es igual que absolute, pero queda fijado en un lugar. (por ejemplo en las publicidades que te siguen el scroll)
+
+STICKY:al igual que en relative, el espacio que se reserva en el DOM lo conserva. Se comporta como un fixed 
+cuando llegamos a un punto que nosotros les decimos.
+
+2) Z index: posiciona en el eje Z, conviene usar numeros grandes, dejando espacios de 50 para 
+poder poner cosas en el medio.conflicto: la unica forma de poner un padre por debajo de un hijo es 
+usando un z-index negativo en el hijo y no definirlo en el padre.
+
+-------------------------------------------------DISPLAY
+
+DISPLAY: Es una propiedad que modifica el comportamiento de las cajas, no tanto la relacion entre ellas.
+
+Propiedades:
+
+block
+inline: generalmente para textos, no se pueden modificar resoluciones, para eso uso el inline-block.
+
+inline-block: la diferencia es que les podoemos dar un ancho y un alto. Le decimos que se 
+comporte como bloque, pero que el tamaño sea de acuerdo al contenido.
+
+FLEX
+GRID
+
+inline-Flex
+inline-Grid
+
+-------------------------------------------------OVERFLOW
+
+OVERFLOW: (Y, X) AUTO, HIDDEN, SCROLL
+
+El overflow sirve para ver que haer con lo que sobre, por ejemplo mucho texto que desborda de un div.
+es un shorthand, tiene overflow-y y overflow-x.
+
+Auto: podemos escrollear adentro de la caja sin que el texto se sobre salga. detecta si es necesario.
+
+Hidden:
+
+Scroll: obligatoriamente pone el scroll por mas que no sea necesario
+
+-------------------------------------------------FLOAT
+
+FLOAT : LEFT, RIGHT, NONE, INHERIT
+
+Lo podemos usar para que el texto en un div envuelva a una imagen.
+right y left es el mismo efecto.
+
+-------------------------------------------------PSEUDO-ELEMENTOS
+
+PSEUDO-ELEMENTOS : es un elemento que no es un elemento, no forman parte del DOM pero si 
+podemos ver cambios visuales.
+
+
+::first-line | BLOCK : solo funciona en los elementos de bloque, en inline no. 
+para cambiar propiedades de la primer linea de un texto.
+
+::first-letter | BLOCK
+igual que el anterior, pero solo con la primer letra.
+
+::placeholder
+sirve para cambiar las propiedades del placeholder del HTML
+
+::selection
+es para cambiar las propiedades de la seleccion ( por ejemplo: cuando seleccioanmos una 
+parte de un texto )
+
+::after | HIJOS - CONTENT (NECESARIO) - INLINE
+::before | HIJOS - CONTENT (NECESARIO) - INLINE
+Son hijos del elemento al que se le aplica.
+se pueden hacer figuras, iconos basicos
+
+p::after/before {
+       content:"";
+}
+
+-------------------------------------------------PSEUDO-CLASES
+
+PSEUDO-CLASES : sirven para escuchar eventos
+
+:Hover
+escuchar el evento cuando el mouse esta encima
+
+:link
+:visited
+:active
+al dejar apretado un boton cambia los estilos, si dejamos de apretar no se mantiene
+se les puede aplicar transiciones, si lo suelto la transicion no se completa.
+
+:focus
+se aplica mas a los imputs, y es cuando esta el elemento en foco.
+se puede usar como el active, pero se mantiene mientras este enfocado.
+
+:lang
+es una funcion, b:lang(es) (espanish, english, etc)  detecta por lenguaje 
+pero hay que darle la propiedad a la etiqueta
+
+<b lang="es"> hellow how are you como estas </b>
+
+b:lang(es) {
+       background: red
+}
+se va a pintar de rojo lo que esta en español
+
+------------------------------------------------- IMG
+OBJECT-FIT
+
+Es una propiedad que se aplica mas que nada a las imagenes
+fill
+contain : la imagen mantiene las resoluciones ajustandose al contenedor (la imagen completa)
+cover: la imagen se ajusta al contenedor y recorta los bordes sobrantes 
+None: pone las resoluciones originales
+scale-down: se queda con la mejor propiedad (none, contain). se queda con la mas chica.
+
+OBJECT-POSITION
+se puede aplicar en conjunto con objet-fit, para el valor cover en imagenes por ejemplo
+es una propiedad con los valores: top, bottom, right, left
+
+------------------------------------------------- CURSOR
+
+es una propiedad que nos permite cambiar el cursor cuando esta encima de un elemento
+se puede combinar con :active por ejemplo
+
+lista de cursores: lista de valores de cursor css (en google y fue)
+https://www.w3schools.com/cssref/pr_class_cursor.php

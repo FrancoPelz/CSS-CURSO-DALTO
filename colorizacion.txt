@@ -1,0 +1,34 @@
+Hay varias formas de definir un color
+
+--color name: definimos los colores por nombre, el navegador selecciona el suyo.
+
+En  codigo para un color exacto en todos los navegadores:
+los colores base de todo son verde, rojo y azul.
+
+--hexadecimal: sistema de 16 unidades. 
+0 1 2 3 4 5 6 7 8 9 a b c d e f
+se usa #fff (es el maximo como en rgb que seria BLANCO)
+se pueden poner 3 unidades o 6. Con 3 valores, el cuarto es la opacidad; Con 6, el 7 y 8.
+#f00 rojo
+#ff0 amarillo (particularidad el amarillo)
+
+HTML picker color code (para buscar codigos de colores)
+
+
+
+
+--RGB (RED GREEN BLUE) : rgb(0,0,0) NEGRO / rgb(255,255,255) BLANCO. 
+Se juega con las bases, y con los extremos para las intensidades y mezclas.
+255 maximo rango de colores de cada uno. con mitades se hacen grises por ejemplo.
+rgb(255,0,0) rojo maximo.
+rgb(255,0,255) violeta rosa
+rgb(100,0,255) morado
+rgb(100,30,225) vajo la intensidad del morado
+
+--RGBA: es una variacion de rgb que le da opacidad (tranparencia)
+
+
+GRADIENTE
+
+pero como degrade de fondo
+background: linear-gradient(to direccion que apunta, color inicial, color final);
