@@ -86,7 +86,7 @@ auto-fill
 auto-fit
 Podemos hacer que se generen columnas o filas dinamicamente si hay espacio o no
 grid-template-column: repeat(auto-fill, minmax(120px, 1fr))
-auto-fit los escala, auto-fit genera
+auto-fit los escala, auto-fill genera
 
 -----------ALINEACION Y CONTROL DE FLUJO-----------
 

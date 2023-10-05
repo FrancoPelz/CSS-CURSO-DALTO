@@ -2,6 +2,11 @@
     font-weight: 100;
 }
 
+body{
+    max-width: 800px;
+    margin: auto;
+}
+
 .content{
     display: flex;
     flex-direction: column;
