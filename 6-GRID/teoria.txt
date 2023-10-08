@@ -38,7 +38,7 @@ grid-column-gap: row column
 grid-item_____
 
 para seleccionar childs que no son el first es:
-grid-tem:nth-child(hijo)
+grid-item:nth-child(hijo)
 
 
 grid-row-start
