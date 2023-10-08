@@ -10,7 +10,7 @@ body{
 .content{
     display: flex;
     flex-direction: column;
-    height: 96vh;
+    height: 100vh;
 }
 
 .header, .main, .aside, .footer{
